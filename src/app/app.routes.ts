@@ -13,6 +13,12 @@ export const routes: Routes = [
      .then(c => c.BookCreateComponent),
   },
   {
+    path: "auth/register",
+    loadComponent: () =>
+      import("./features/auth/pages/register/register.component")
+      .then(c => c.RegisterComponent)
+  },
+  {
     path: "about",
     loadComponent: () =>
       import("./features/info/pages/a-propos/a-propos.component")

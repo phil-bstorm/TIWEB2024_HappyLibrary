@@ -1,11 +1,11 @@
 import {Component} from '@angular/core';
-import {RouterOutlet} from '@angular/router';
+import {RouterLink, RouterOutlet} from '@angular/router';
 import {NavBarComponent} from './shared/components/layout/nav-bar/nav-bar.component';
 import {LinkModel} from './shared/components/layout/nav-bar/models/link.model';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavBarComponent],
+  imports: [RouterOutlet, NavBarComponent, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -19,5 +19,10 @@ export class AppComponent {
     }, {
       url: "/about",
       name: "A propos"
-    }];
+    },
+    {
+      url: "/book/create",
+      name: "Create Book"
+    }
+  ];
 }

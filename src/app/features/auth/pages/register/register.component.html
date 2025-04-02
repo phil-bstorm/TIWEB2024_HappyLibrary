@@ -1,0 +1,26 @@
+<h2>Enregistrement de l'utilisateur</h2>
+<form [formGroup]="registerForm" (ngSubmit)="submitRegisterForm()">
+  <div>
+    <label for="email">Email:</label>
+    <input id="email" type="email" formControlName="email" required>
+    @if (
+      registerForm.get("email")?.touched &&
+      !registerForm.get("email")?.valid
+      ) {
+      <p>Le champ email est requis</p>
+    }
+  </div>
+
+  <div>
+    <label for="password">Password:</label>
+    <input id="password" type="password" formControlName="password" required>
+    @if (
+      registerForm.get("password")?.touched &&
+      !registerForm.get("password")?.valid
+      ) {
+      <p>Le champ mot de passe est requis</p>
+    }
+  </div>
+
+  <button type="submit" [disabled]="registerForm.invalid">Enregister!</button>
+</form>

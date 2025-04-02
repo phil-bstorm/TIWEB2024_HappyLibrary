@@ -1,5 +1,17 @@
+<!-- Idéalement mettre tout ça dans un composant header -->
 <h1>Happy Library</h1>
 
 <nav-bar [links]="homeLinks" />
+
+<ul>
+<!--  @if()-->
+  <li>
+    <a routerLink="/auth/register">Register</a>
+  </li>
+  <li>
+    <a routerLink="/auth/login">Login</a>
+  </li>
+</ul>
+<!-- fin du composant header -->
 
 <router-outlet />

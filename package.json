@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "fakeApi" : "npx json-server@0.17.4 --watch json-server/fakeApi.json -m ./node_modules/json-server-auth"
   },
   "private": true,
   "dependencies": {
