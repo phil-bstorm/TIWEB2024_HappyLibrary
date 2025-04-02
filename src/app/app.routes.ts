@@ -11,5 +11,11 @@ export const routes: Routes = [
     loadComponent: () =>
      import("./features/book/pages/book-create/book-create.component")
      .then(c => c.BookCreateComponent),
+  },
+  {
+    path: "about",
+    loadComponent: () =>
+      import("./features/info/pages/a-propos/a-propos.component")
+        .then(c => c.AProposComponent)
   }
 ];
